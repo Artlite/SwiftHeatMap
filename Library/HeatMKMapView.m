@@ -7,6 +7,9 @@
 //
 
 #import "HeatMKMapView.h"
+@interface HeatMKMapView ()
+@property (nonatomic, strong) HeatMap *hm;
+@end
 
 @implementation HeatMKMapView
 
@@ -30,12 +33,14 @@
 
 
 -(void) onCreateHeatMap {
+    
     if((self.heatPoints == nil) || (self.heatPoints.count <= 0)){
         return;
     }
-    HeatMap *hm = [[HeatMap alloc] initWithData:[self heatMapData:self.heatPoints]];
-    [self addOverlay:hm];
-    [self setVisibleMapRect:[hm boundingMapRect] animated:YES];
+    [self removeOverlay:self.hm];
+    self.hm = [[HeatMap alloc] initWithData:[self heatMapData:self.heatPoints]];
+    [self addOverlay:self.hm];
+    [self setVisibleMapRect:[self.hm boundingMapRect] animated:YES];
 }
 
 - (NSDictionary *)heatMapData: (NSArray *) points
