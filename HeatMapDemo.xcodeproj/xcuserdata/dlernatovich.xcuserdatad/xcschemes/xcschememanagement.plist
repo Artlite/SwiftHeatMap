@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HeatMapExample.xcscheme</key>
+		<key>HeatMapDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>945AB29415276E3A00E76484</key>
+		<key>01A9FC7A1B67ED0C00496EA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>01A9FC8F1B67ED0C00496EA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

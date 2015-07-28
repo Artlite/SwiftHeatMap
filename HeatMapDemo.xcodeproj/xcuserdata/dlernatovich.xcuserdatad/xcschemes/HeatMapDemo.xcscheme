@@ -14,10 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "945AB29415276E3A00E76484"
-               BuildableName = "HeatMapExample.app"
-               BlueprintName = "HeatMapExample"
-               ReferencedContainer = "container:HeatMapExample.xcodeproj">
+               BlueprintIdentifier = "01A9FC7A1B67ED0C00496EA0"
+               BuildableName = "HeatMapDemo.app"
+               BlueprintName = "HeatMapDemo"
+               ReferencedContainer = "container:HeatMapDemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "01A9FC8F1B67ED0C00496EA0"
+               BuildableName = "HeatMapDemoTests.xctest"
+               BlueprintName = "HeatMapDemoTests"
+               ReferencedContainer = "container:HeatMapDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +42,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "01A9FC8F1B67ED0C00496EA0"
+               BuildableName = "HeatMapDemoTests.xctest"
+               BlueprintName = "HeatMapDemoTests"
+               ReferencedContainer = "container:HeatMapDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "945AB29415276E3A00E76484"
-            BuildableName = "HeatMapExample.app"
-            BlueprintName = "HeatMapExample"
-            ReferencedContainer = "container:HeatMapExample.xcodeproj">
+            BlueprintIdentifier = "01A9FC7A1B67ED0C00496EA0"
+            BuildableName = "HeatMapDemo.app"
+            BlueprintName = "HeatMapDemo"
+            ReferencedContainer = "container:HeatMapDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "945AB29415276E3A00E76484"
-            BuildableName = "HeatMapExample.app"
-            BlueprintName = "HeatMapExample"
-            ReferencedContainer = "container:HeatMapExample.xcodeproj">
+            BlueprintIdentifier = "01A9FC7A1B67ED0C00496EA0"
+            BuildableName = "HeatMapDemo.app"
+            BlueprintName = "HeatMapDemo"
+            ReferencedContainer = "container:HeatMapDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "945AB29415276E3A00E76484"
-            BuildableName = "HeatMapExample.app"
-            BlueprintName = "HeatMapExample"
-            ReferencedContainer = "container:HeatMapExample.xcodeproj">
+            BlueprintIdentifier = "01A9FC7A1B67ED0C00496EA0"
+            BuildableName = "HeatMapDemo.app"
+            BlueprintName = "HeatMapDemo"
+            ReferencedContainer = "container:HeatMapDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
