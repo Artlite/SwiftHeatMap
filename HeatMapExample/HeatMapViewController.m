@@ -26,6 +26,7 @@
 #import "HeatMapViewController.h"
 #import "parseCSV.h"
 
+
 enum segmentedControlIndicies {
     kSegmentStandard = 0,
     kSegmentSatellite = 1,
@@ -34,8 +35,6 @@ enum segmentedControlIndicies {
 };
 
 @interface HeatMapViewController()
-
-- (NSDictionary *)heatMapData;
 
 @end
 
@@ -46,73 +45,30 @@ enum segmentedControlIndicies {
 {
     [super viewDidLoad];
     
+    NSMutableArray * array = [NSMutableArray new];
+    [array addObject:[[HeatPoint alloc] initWithLat:46.961936 andLng:32.073569]];
+    [array addObject:[[HeatPoint alloc] initWithLat:46.957660 andLng:32.099490]];
+    [array addObject:[[HeatPoint alloc] initWithLat:46.969756 andLng:32.089877]];
+    
     self.mapView.delegate = self;
-    
-    HeatMap *hm = [[HeatMap alloc] initWithData:[self heatMapData]];
-    [self.mapView addOverlay:hm];
-    [self.mapView setVisibleMapRect:[hm boundingMapRect] animated:YES];
+    [self.mapView reloadDataWithArray:array];
 }
 
-- (IBAction)mapTypeChanged:(UISegmentedControl *)sender {
-    switch (sender.selectedSegmentIndex) {
-        case kSegmentStandard:
-            self.mapView.mapType = MKMapTypeStandard;
-            break;
-            
-        case kSegmentSatellite:
-            self.mapView.mapType = MKMapTypeSatellite;
-            break;
-        
-        case kSegmentHybrid:
-            self.mapView.mapType = MKMapTypeHybrid;
-            break;
-            
-        case kSegmentTerrain:
-            self.mapView.mapType = 3;
-            break;
-    }
-}
-
-- (NSDictionary *)heatMapData
-{
-    CSVParser *parser = [CSVParser new];
-    NSString *csvFilePath = [[NSBundle mainBundle] pathForResource:@"Breweries_clean" ofType:@"csv"];
-    [parser openFile:csvFilePath];
-    NSArray *csvContent = [parser parseFile];
-    
-    NSMutableDictionary *toRet = [[NSMutableDictionary alloc] initWithCapacity:[csvContent count]];
-    
-    for (NSArray *line in csvContent) {
-        
-        MKMapPoint point = MKMapPointForCoordinate(
-            CLLocationCoordinate2DMake([[line objectAtIndex:1] doubleValue], 
-                                       [[line objectAtIndex:0] doubleValue]));
-        
-        NSValue *pointValue = [NSValue value:&point withObjCType:@encode(MKMapPoint)];
-        [toRet setObject:[NSNumber numberWithInt:1] forKey:pointValue];
-    }
-    
-    return toRet;
-}
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
     [self setMapView:nil];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-#pragma mark -
 #pragma mark MKMapViewDelegate
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
-    return [[HeatMapView alloc] initWithOverlay:overlay];
+    return [HeatMKMapView getHeatMapOverlay:overlay];
 }
+
+
+
 
 @end

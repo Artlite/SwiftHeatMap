@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A9FC6D1B67E06D00496EA0 /* HeatPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9FC6C1B67E06D00496EA0 /* HeatPoint.m */; };
+		01A9FC711B67E65500496EA0 /* HeatMKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A9FC701B67E65500496EA0 /* HeatMKMapView.m */; };
 		944B84EF152C1BA3001A0781 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 944B84EE152C1BA3001A0781 /* README.md */; };
 		945AB29A15276E3A00E76484 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AB29915276E3A00E76484 /* UIKit.framework */; };
 		945AB29C15276E3A00E76484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AB29B15276E3A00E76484 /* Foundation.framework */; };
@@ -26,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01A9FC6B1B67E06D00496EA0 /* HeatPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeatPoint.h; path = Models/HeatPoint.h; sourceTree = "<group>"; };
+		01A9FC6C1B67E06D00496EA0 /* HeatPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeatPoint.m; path = Models/HeatPoint.m; sourceTree = "<group>"; };
+		01A9FC6F1B67E65500496EA0 /* HeatMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeatMKMapView.h; path = CustomView/HeatMKMapView.h; sourceTree = "<group>"; };
+		01A9FC701B67E65500496EA0 /* HeatMKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeatMKMapView.m; path = CustomView/HeatMKMapView.m; sourceTree = "<group>"; };
 		944B84EE152C1BA3001A0781 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		945AB29515276E3A00E76484 /* HeatMapExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatMapExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945AB29915276E3A00E76484 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -68,6 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A9FC6A1B67E04F00496EA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01A9FC6B1B67E06D00496EA0 /* HeatPoint.h */,
+				01A9FC6C1B67E06D00496EA0 /* HeatPoint.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		01A9FC6E1B67E62300496EA0 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				01A9FC6F1B67E65500496EA0 /* HeatMKMapView.h */,
+				01A9FC701B67E65500496EA0 /* HeatMKMapView.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		945AB28A15276E3900E76484 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +128,7 @@
 		945AB29F15276E3A00E76484 /* HeatMapExample */ = {
 			isa = PBXGroup;
 			children = (
+				01A9FC6A1B67E04F00496EA0 /* Models */,
 				945AB2A815276E3A00E76484 /* HeatMapAppDelegate.h */,
 				945AB2A915276E3A00E76484 /* HeatMapAppDelegate.m */,
 				945AB2AB15276E3A00E76484 /* MainStoryboard.storyboard */,
@@ -128,6 +153,7 @@
 		945AB2B615276E7B00E76484 /* HeatMap */ = {
 			isa = PBXGroup;
 			children = (
+				01A9FC6E1B67E62300496EA0 /* CustomView */,
 				945AB2B715276E7B00E76484 /* HeatMap.h */,
 				945AB2B815276E7B00E76484 /* HeatMap.m */,
 				945AB2B915276E7B00E76484 /* HeatMapView.h */,
@@ -218,6 +244,8 @@
 				945AB2B015276E3A00E76484 /* HeatMapViewController.m in Sources */,
 				945AB2BF15276E7B00E76484 /* HeatMap.m in Sources */,
 				945AB2C015276E7B00E76484 /* HeatMapView.m in Sources */,
+				01A9FC711B67E65500496EA0 /* HeatMKMapView.m in Sources */,
+				01A9FC6D1B67E06D00496EA0 /* HeatPoint.m in Sources */,
 				945AB2D4152837AC00E76484 /* parseCSV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

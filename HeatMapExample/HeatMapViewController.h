@@ -27,9 +27,11 @@
 #import <MapKit/MapKit.h>
 #import "HeatMap.h"
 #import "HeatMapView.h"
+#import "HeatPoint.h"
+#import "HeatMKMapView.h"
 
 @interface HeatMapViewController : UIViewController <MKMapViewDelegate>
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet HeatMKMapView *mapView;
 
 @end
